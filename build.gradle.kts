@@ -39,10 +39,12 @@ dependencies {
 	implementation("io.github.classgraph:classgraph:4.8.128")
 }
 
+val mavenRootProjectArtifact = "api"
+
 publishing {
 	publications {
 		create<MavenPublication>("maven") {
-			artifactId = "api"
+			artifactId = mavenRootProjectArtifact
 			from(components["java"])
 		}
 	}
@@ -54,7 +56,7 @@ subprojects {
 	publishing {
 		publications {
 			create<MavenPublication>("maven") {
-				artifactId = project.path.substring(1).replace(':', '-')
+				artifactId = "$mavenRootProjectArtifact-" + project.path.substring(1).replace(':', '-')
 				from(components["java"])
 			}
 		}
