@@ -5,6 +5,17 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../CSGOPoison-Official-Plugins" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../CSGOPoison-Official-Plugins" />
+            <option value="$PROJECT_DIR$/../CSGOPoison-Official-Plugins/glow-esp" />
+            <option value="$PROJECT_DIR$/../CSGOPoison-Official-Plugins/menu" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>

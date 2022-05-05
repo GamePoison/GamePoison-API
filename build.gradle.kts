@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
 	kotlin("jvm") version "1.5.31"
 	`java-library`
@@ -12,6 +14,7 @@ allprojects {
 	group = "org.gamepoison"
 	
 	repositories {
+		mavenLocal() //TODO perhaps wrong
 		mavenCentral()
 	}
 	
@@ -61,4 +64,8 @@ subprojects {
 			}
 		}
 	}
+}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+	languageVersion = "1.4"
 }

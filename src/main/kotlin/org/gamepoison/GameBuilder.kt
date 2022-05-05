@@ -4,7 +4,6 @@ open class GameBuilder<T : Game>(
 	override val platform: Platform,
 	override val name: String
 ) : Game {
-	
 	inner class FunBuilder {
 		var invoke: (T.() -> Unit)? = null
 		

@@ -11,6 +11,7 @@ object ClassLoading {
 				if (baseClass.isInterface)
 					scanResult.getClassesImplementing(baseClass)
 				else scanResult.getSubclasses(baseClass)
+
 			classList.forEach {
 				val loadedClass = it.loadClass(baseClass)
 				loadedClass.loadClass()
